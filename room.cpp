@@ -3,7 +3,6 @@
  #include <vector>
  #include <map>
  #include "room.h"
-
  using namespace std;
 
  char* room::getName() {
@@ -17,4 +16,17 @@
  vector<char*>* room::getItems() {
    return &items;
  }
+
+ void room::addItem(char* itemsName) {
+   items.push_back(itemsName);
+ }
+
+ map<const char*, room*>* room::getMap() {
+   return &exits;
+ }
+
+ void room::addExit(const char* direction, room* newRoom) {
+   exits.insert(pair<const char*, room *>(direction, newRoom));
+ }
+
 
