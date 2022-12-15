@@ -9,14 +9,22 @@
 
  using namespace std;
 
- class Room{
+ class room{
   public:
 
    char* getName();
    void setName(char* addName);
-   
+   vector<char*>* getItems();
+   void addItem(char* itemName);
+   map<const char*, room*>* getMap();
+   void addExit(const char* direction, room* newRoom);
 
+  private:
    
+   map<const char*, room*> exits;
+   char name[50];
+   vector<char*> items;
+   char description[50];
  };
  #endif
 
