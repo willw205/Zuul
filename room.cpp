@@ -25,7 +25,7 @@
    return description;  
  }
 
- char* room::setDescription(char* newDescription) {
+ void room::setDescription(char* newDescription) {
    strcpy(description, newDescription); 
  }
 
