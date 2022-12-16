@@ -24,7 +24,6 @@
    map<const char*, room*> exits;
    char name[50];
    vector<char*> items;
-   char description[50];
  };
  #endif
 
