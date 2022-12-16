@@ -21,6 +21,14 @@
    items.push_back(itemsName);
  }
 
+ char* room::getDescription() {
+   return description;  
+ }
+
+ char* room::setDescription(char* newDescription) {
+   strcpy(description, newDescription); 
+ }
+
  map<const char*, room*>* room::getMap() {
    return &exits;
  }
@@ -28,5 +36,4 @@
  void room::addExit(const char* direction, room* newRoom) {
    exits.insert(pair<const char*, room *>(direction, newRoom));
  }
-
 
