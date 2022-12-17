@@ -1,4 +1,8 @@
 
+ //William Wong
+ //12/16/22
+ //This project is zuul, which allows the users to explore a mysterious place with many rooms
+
  #include <vector>
  #include <cstring>
  #include <iostream>
