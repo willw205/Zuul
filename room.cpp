@@ -5,6 +5,9 @@
  #include "room.h"
  using namespace std;
 
+ // Below is initializing the functions
+ // Getters and setters are also put in place for name, description, etc...
+
  char* room::getName() {
    return name;
  }
@@ -12,6 +15,8 @@
  void room::setName(char* addName) {
    strcpy(name, addName);
  }
+
+ // Helps to return list of items within room
 
  vector<char*>* room::getItems() {
    return &items;
@@ -29,9 +34,13 @@
    strcpy(description, newDescription); 
  }
 
+ // Returning exits below
+
  map<const char*, room*>* room::getMap() {
    return &exits;
  }
+
+ //Below helps to create exits
 
  void room::addExit(const char* direction, room* newRoom) {
    exits.insert(pair<const char*, room *>(direction, newRoom));
